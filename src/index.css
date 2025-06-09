@@ -155,7 +155,7 @@ section {
   }
 
   .app-showcase {
-    @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
+    @apply w-full mt-5 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
 
     .showcaselayout {
       @apply flex xl:flex-row flex-col gap-10 justify-between;
@@ -249,10 +249,10 @@ section {
   .timeline-logo {
     @apply md:size-20 size-10 flex-none rounded-full flex justify-center items-center md:-translate-y-7 border border-black-50 bg-black-100;
   }
-
+/* 
   .exp-card-wrapper {
     @apply flex flex-col-reverse xl:flex-row xl:gap-20 gap-10 justify-between;
-  }
+  } */
 
   .gradient-edge {
     @apply w-36 h-full absolute bottom-0 z-20;
@@ -363,7 +363,7 @@ section {
 }
 
 /* Hero Text slider ends */
-
+/* 
 .gradient-line {
   width: 2px;
   background: linear-gradient(
@@ -392,7 +392,7 @@ section {
     rgba(0, 0, 0, 1) 0%,
     rgba(255, 255, 255, 0) 100%
   );
-}
+} */
 
 /* marquee */
 .marquee {
@@ -441,7 +441,6 @@ section {
   border-radius: 12px;
   border: 2px solid transparent;
   background: var(--gradient);
-  background-attachment: fixed;
   mask: linear-gradient(#0000, #0000),
     conic-gradient(
       from calc((var(--start) - 15) * 1deg),
@@ -469,4 +468,8 @@ section {
 
 .card:hover::before {
   opacity: 1;
+}
+
+[data-scroll-container] {
+  overflow: hidden;
 }

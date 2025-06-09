@@ -1,4 +1,6 @@
-{/* Experience Section */}
+{
+  /* Experience Section */
+}
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -7,7 +9,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { expCards } from "../constants";
 import TitleHeader from "../components/TitleHeader";
 import GlowCard from "../components/GlowCard";
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,7 +60,15 @@ const Experience = () => {
           // Scale the timeline height as the user scrolls
           // from 1 to 0 as the user scrolls up the screen
           gsap.to(".timeline", {
-            scaleY: 1 - self.progress,
+            scaleY: 0,
+            transformOrigin: "bottom bottom",
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".timeline",
+              start: "top center",
+              end: "70% center",
+              scrub: true, // ← THIS IS IMPORTANT
+            },
           });
         },
       },
