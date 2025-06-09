@@ -3,21 +3,20 @@ import Button from "../components/Button";
 import HeroExperience from "../components/HeroModels/HeroExperience";
 import { words } from "../constants";
 import { useGSAP } from "@gsap/react";
-import gsap from 'gsap';
-
+import gsap from "gsap";
 
 const Hero = () => {
-    useGSAP(() => {
-        const tl = gsap.timeline();
-        tl.from(".hero-text h1", {
-            y: 70,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.2,
-            ease: "power2.inOut",
-            delay: 0.5  
-        })
-    })
+  useGSAP(() => {
+    const tl = gsap.timeline();
+    tl.from(".hero-text h1", {
+      y: 70,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power2.inOut",
+      delay: 0.5,
+    });
+  });
 
   return (
     <section id="hero" className="relative overflow-hidden">
@@ -53,19 +52,21 @@ const Hero = () => {
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
             </div>
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">Hi, I'm Anshul, a developer based in India with passion for code.</p>
-            <Button 
-                className = "md:w-80 md:h-16 w-60 h-12"
-                id = "button"
-                text = "See my work"
+            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+              Hi, I'm Anshul, a developer based in India with passion for code.
+            </p>
+            <Button
+              className="md:w-80 md:h-16 w-60 h-12"
+              id="button"
+              text="See my work"
             />
           </div>
         </header>
         {/* 3d hero content */}
         <figure>
-            <div className="hero-3d-layout">
-                <HeroExperience />
-            </div>
+          <div className="hero-3d-layout">
+              <HeroExperience />
+          </div>
         </figure>
       </div>
       <AnimatedCounter />
@@ -74,7 +75,6 @@ const Hero = () => {
 };
 
 export default Hero;
-
 
 // When we default export we import the component like this
 // import Hero from "./section/Hero";
