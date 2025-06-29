@@ -25,7 +25,7 @@ const HeroExperience = () => {
                 position={[0, -3.5, 0]}
                 rotation={[0, -Math.PI/4, 0]}
             >
-                <Room />
+            <Room />
             </group>
         </Canvas>
     );

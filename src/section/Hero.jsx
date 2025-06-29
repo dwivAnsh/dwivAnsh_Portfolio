@@ -1,4 +1,3 @@
-import AnimatedCounter from "../components/AnimatedCounter";
 import Button from "../components/Button";
 import HeroExperience from "../components/HeroModels/HeroExperience";
 import { words } from "../constants";
@@ -56,20 +55,20 @@ const Hero = () => {
               Hi, I'm Anshul, a developer based in India with passion for code.
             </p>
             <Button
+              text="View Resume"
               className="md:w-80 md:h-16 w-60 h-12"
-              id="button"
-              text="See my work"
+              href="/Anshul-Dwivedi-Resume-2025.pdf"
+              target="_blank"
             />
           </div>
         </header>
         {/* 3d hero content */}
         <figure>
           <div className="hero-3d-layout">
-              <HeroExperience />
+            <HeroExperience />
           </div>
         </figure>
       </div>
-      {/* <AnimatedCounter /> */}
     </section>
   );
 };
